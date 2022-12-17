@@ -1,0 +1,144 @@
+2022-10-23 00:41:49.483  INFO  [Test]            io.keploy.service.GrpcService : test starting in 5 sec
+23-Oct-2022 00:41:49.732 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Oct-2022 00:41:49.746 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/gouravkumar/Downloads/apache-tomcat-8.5.82/webapps/host-manager] has finished in [1,225] ms
+23-Oct-2022 00:41:49.763 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Oct-2022 00:41:49.778 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 9216 ms
+2022-10-23 00:41:50.102  INFO  [Test]            io.keploy.service.GrpcService : starting test execution id: 62f863a4-427d-45f9-9db2-9cde4b1bf03c total tests: 1
+2022-10-23 00:41:50.103  INFO  [Test]            io.keploy.service.GrpcService : testing 1 of 1 testcase id: [56f0fd22-70aa-4ae5-bf6d-ae1734c63713]
+Response from okhttp(Kotlin) client Response{protocol=h2, code=200, message=OK, url=https://reqres.in/api/users/2}
+2022-10-23 00:41:51.768  INFO  [lambda$Test$1]            io.keploy.service.GrpcService : result : testcase id: [56f0fd22-70aa-4ae5-bf6d-ae1734c63713]  passed: true
+2022-10-23 00:41:51.784  INFO  [Test]            io.keploy.service.GrpcService : test run completed with run id [62f863a4-427d-45f9-9db2-9cde4b1bf03c]
+2022-10-23 00:41:51.784  INFO  [Test]            io.keploy.service.GrpcService : || passed overall: TRUE ||
+23-Oct-2022 00:42:01.809 INFO [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+23-Oct-2022 00:42:01.841 INFO [Thread-4] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+23-Oct-2022 00:42:01.876 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [ROOT] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+23-Oct-2022 00:42:01.878 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [Thread-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Thread.join(Thread.java:1257)
+ java.lang.Thread.join(Thread.java:1331)
+ java.lang.ApplicationShutdownHooks.runHooks(ApplicationShutdownHooks.java:107)
+ java.lang.ApplicationShutdownHooks$1.run(ApplicationShutdownHooks.java:46)
+ java.lang.Shutdown.runHooks(Shutdown.java:123)
+ java.lang.Shutdown.sequence(Shutdown.java:170)
+ java.lang.Shutdown.exit(Shutdown.java:216)
+ java.lang.Runtime.exit(Runtime.java:109)
+ java.lang.System.exit(System.java:973)
+ io.keploy.servlet.KeployMiddleware.lambda$init$0(KeployMiddleware.java:123)
+ io.keploy.servlet.KeployMiddleware$$Lambda$60/1378787444.run(Unknown Source)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.878 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [grpc-nio-worker-ELG-1-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+ sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+ sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.grpc.netty.shaded.io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:817)
+ io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+ io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+ io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+ io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.953 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [grpc-default-executor-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.957 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [grpc-nio-worker-ELG-1-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+ sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+ sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:101)
+ io.grpc.netty.shaded.io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+ io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:813)
+ io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+ io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+ io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+ io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.974 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [pool-4-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.974 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [OkHttp www.postman.com] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.SocketInputStream.socketRead0(Native Method)
+ java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+ java.net.SocketInputStream.read(SocketInputStream.java:171)
+ java.net.SocketInputStream.read(SocketInputStream.java:141)
+ sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:464)
+ sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:68)
+ sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1346)
+ sun.security.ssl.SSLSocketImpl.access$300(SSLSocketImpl.java:73)
+ sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:962)
+ okio.InputStreamSource.read(JvmOkio.kt:94)
+ okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:125)
+ okio.RealBufferedSource.request(RealBufferedSource.kt:206)
+ okio.RealBufferedSource.require(RealBufferedSource.kt:199)
+ okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+ okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+ okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+ okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+ okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+ okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+ okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:01.989 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [Okio Watchdog] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ okio.AsyncTimeout$Companion.awaitTimeout$okio(AsyncTimeout.kt:302)
+ okio.AsyncTimeout$Watchdog.run(AsyncTimeout.kt:183)
+23-Oct-2022 00:42:02.062 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:02.082 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [OkHttp TaskRunner] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:02.083 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [OkHttp TaskRunner] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:460)
+ okhttp3.internal.concurrent.TaskRunner$RealBackend.coordinatorWait(TaskRunner.kt:294)
+ okhttp3.internal.concurrent.TaskRunner.awaitTaskToRun(TaskRunner.kt:218)
+ okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:59)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:02.085 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ROOT] appears to have started a thread named [OkHttp TaskRunner] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:460)
+ java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:362)
+ java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:941)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:750)
+23-Oct-2022 00:42:02.088 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3ce8c208]) and a value of type [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap] (value [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap@7a9fcfc]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2022 00:42:02.088 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3ce8c208]) and a value of type [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap] (value [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap@7d0096a1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2022 00:42:02.088 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3d32c18d]) and a value of type [io.keploy.regression.context.Kcontext] (value [io.keploy.regression.context.Kcontext@4730bca1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2022 00:42:02.088 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ROOT] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@3ce8c208]) and a value of type [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap] (value [io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap@f36f6a7]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+23-Oct-2022 00:42:02.155 INFO [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+23-Oct-2022 00:42:02.161 INFO [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

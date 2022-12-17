@@ -1,0 +1,4 @@
+version: api.keploy.io/v1beta1
+kind: sql
+name: test-1-0
+spec: null

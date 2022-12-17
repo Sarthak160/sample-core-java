@@ -1,0 +1,36 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: /url/mYWbf
+        header:
+            accept: '*/*'
+            accept-encoding: gzip, deflate, br
+            cache-control: no-cache
+            connection: keep-alive
+            host: localhost:8080
+            postman-token: a64fb86d-f496-4f17-aa88-0b48beecb355
+            user-agent: PostmanRuntime/7.30.0
+        body: ""
+    resp:
+        status_code: 302
+        header:
+            Location: ""
+            core: java
+        body: ""
+        status_message: Found
+        proto_major: 1
+        proto_minor: 1
+    objects:
+        - type: error
+          data: H4sIAAAAAAAA/wEAAP//AAAAAAAAAAA=
+    mocks:
+        - test-1-0
+    assertions:
+        noise: []
+    created: 1671304528
